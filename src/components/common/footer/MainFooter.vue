@@ -3,9 +3,9 @@
 
 /* -------------------------------- Template -------------------------------- */
 <template>
-  <main class="container mx-auto">
-    <h1>Home</h1>
-  </main>
+  <footer class="container mx-auto">
+    <h1>header</h1>
+  </footer>
 </template>
 
 /* --------------------------------- Styles --------------------------------- */

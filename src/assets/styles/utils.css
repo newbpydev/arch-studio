@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+
+  @media (min-width: 48em) {
+    max-width: 57.3rem;
+  }
+
+  @media (min-width: 90em) {
+    max-width: 111rem;
+  }
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
