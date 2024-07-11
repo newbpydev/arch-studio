@@ -4,7 +4,7 @@
 /* -------------------------------- Template -------------------------------- */
 <template>
   <main>
-    <h1>About</h1>
+    <h1>Portfolio</h1>
   </main>
 </template>
 
