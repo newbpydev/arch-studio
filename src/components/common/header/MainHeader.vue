@@ -2,9 +2,11 @@
 <script lang="ts" setup>
 import TheHeaderLogo from '@/components/common/icons/TheHeaderLogo.vue'
 import MainNavigation from '@/components/common/navigation/MainNavigation.vue'
+import MenuIcon from '@/assets/images/icons/icon-hamburger.svg'
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 const isMobile = ref(false)
+const isOpen = ref(false)
 
 const handleResize = () => {
   isMobile.value = window.innerWidth <= 768
@@ -16,22 +18,31 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('resize', handleResize)
 })
+
+const handleClick = () => {
+  isOpen.value = !isOpen.value
+}
 </script>
 
 /* -------------------------------- Template -------------------------------- */
 <template>
   <header class="container mx-auto">
     <TheHeaderLogo height="10" />
-    <MainNavigation v-if="isMobile" />
+    <MenuIcon v-if="isMobile" @click="handleClick" />
+    <MainNavigation v-model="isOpen" :is-mobile="isMobile" :is-open="isOpen" />
+
   </header>
 </template>
 
 /* --------------------------------- Styles --------------------------------- */
 <style scoped>
 header {
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 3.2rem;
+  position: relative;
+  z-index: 10;
 }
 </style>

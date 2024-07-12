@@ -1,87 +1,88 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --ast-c-very-dark-blue: #1b1d23;
-  --ast-c-dark-grey: #60636d;
-  --ast-c-medium-grey: #7d828f;
-  --ast-c-light-grey: #c8ccd8;
-  --ast-c-very-light-grey: #eeeff4;
-  --ast-c-red: #df5656;
-  --ast-c-white: #ffffff;
+    --ast-c-very-dark-blue: #1b1d23;
+    --ast-c-dark-grey: #60636d;
+    --ast-c-medium-grey: #7d828f;
+    --ast-c-light-grey: #c8ccd8;
+    --ast-c-very-light-grey: #eeeff4;
+    --ast-c-red: #df5656;
+    --ast-c-white: #ffffff;
 
-  --ast-c-text: var(--ast-c-dark-grey);
-  --ast-c-text-heading: var(--ast-c-very-dark-blue);
-  --ast-c-text-heading-xl: var(--ast-c-light-grey);
+    --ast-c-text: var(--ast-c-dark-grey);
+    --ast-c-text-heading: var(--ast-c-very-dark-blue);
+    --ast-c-text-heading-xl: var(--ast-c-light-grey);
 }
 
 /* semantic color variables for this project */
 :root {
-  --color-text: var(--ast-c-dark-grey);
-  --color-heading: var(--ast-c-very-dark-blue);
+    --color-text: var(--ast-c-dark-grey);
+    --color-heading: var(--ast-c-very-dark-blue);
 
-  --color-background: #f2f2f2;
+    --color-background: #f2f2f2;
+    --color-background-menu: var(--ast-c-very-light-grey);
 
-  --color-background-button-normal: var(--ast-c-very-dark-blue);
-  --color-background-button-hover: var(--ast-c-dark-grey);
-  --color-background-button-active: var(--ast-c-light-grey);
-  --color-text-button: var(var(--ast-c-white));
+    --color-background-button-normal: var(--ast-c-very-dark-blue);
+    --color-background-button-hover: var(--ast-c-dark-grey);
+    --color-background-button-active: var(--ast-c-light-grey);
+    --color-text-button: var(var(--ast-c-white));
 
-  --color-page-watermark: var(var(--ast-c-light-grey));
+    --color-page-watermark: var(var(--ast-c-light-grey));
 
-  --font-size-text: 18px;
-  --font-size-heading-xl: 120px;
-  --font-size-heading-l: 48px;
-  --font-size-heading-m: 48px;
-  --font-size-heading-s: 32px;
+    --font-size-text: 18px;
+    --font-size-heading-xl: 120px;
+    --font-size-heading-l: 48px;
+    --font-size-heading-m: 48px;
+    --font-size-heading-s: 32px;
 
-  --line-height-text: 24px;
-  --line-height-heading-xl: 200px;
-  --line-height-heading-l: 48px;
-  --line-height-heading-m: 52px;
-  --line-height-heading-s: 40px;
+    --line-height-text: 24px;
+    --line-height-heading-xl: 200px;
+    --line-height-heading-l: 48px;
+    --line-height-heading-m: 52px;
+    --line-height-heading-s: 40px;
 
-  --letter-spacing-text: 0px;
-  --letter-spacing-heading-xl: 0px;
-  --letter-spacing-heading-l: 1.2px;
-  --letter-spacing-heading-m: -1.71px;
-  --letter-spacing-heading-s: 0px;
+    --letter-spacing-text: 0px;
+    --letter-spacing-heading-xl: 0px;
+    --letter-spacing-heading-l: 1.2px;
+    --letter-spacing-heading-m: -1.71px;
+    --letter-spacing-heading-s: 0px;
 }
 
 @media (min-width: 48em) {
-  :root {
-    --font-size-heading-l: 96px;
-    --font-size-heading-m: 72px;
+    :root {
+        --font-size-heading-l: 96px;
+        --font-size-heading-m: 72px;
 
-    --line-height-heading-l: 80px;
-    --line-height-heading-m: 64px;
-    --line-height-heading-s: 40px;
+        --line-height-heading-l: 80px;
+        --line-height-heading-m: 64px;
+        --line-height-heading-s: 40px;
 
-    --letter-spacing-heading-xl: -3px;
-    --letter-spacing-heading-l: -2px;
-    --letter-spacing-heading-m: -2px;
-  }
+        --letter-spacing-heading-xl: -3px;
+        --letter-spacing-heading-l: -2px;
+        --letter-spacing-heading-m: -2px;
+    }
 }
 
 @media (min-width: 90em) {
-  :root {
-    --font-size-heading-xl: 250px;
+    :root {
+        --font-size-heading-xl: 250px;
 
-    --letter-spacing-heading-xl: -5px;
-  }
+        --letter-spacing-heading-xl: -5px;
+    }
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-  color: var(--color-text);
-  background: var(--color-background);
-  font-size: var(--font-size-text);
-  font-family: 'League Spartan', sans-serif;
-  font-style: normal;
-  line-height: var(--line-height-text);
-  font-weight: 500;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    color: var(--color-text);
+    background: var(--color-background);
+    font-size: var(--font-size-text);
+    font-family: 'League Spartan', sans-serif;
+    font-style: normal;
+    line-height: var(--line-height-text);
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
