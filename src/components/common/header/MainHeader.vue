@@ -2,16 +2,7 @@
 <script lang="ts" setup>
 import TheHeaderLogo from '@/components/common/icons/TheHeaderLogo.vue'
 import MainNavigation from '@/components/common/navigation/MainNavigation.vue'
-import { onMounted, onBeforeUnmount, ref, watch, onUpdated } from 'vue'
-
-const vWindowSize = {
-  mounted: (el: HTMLElement) => {
-    el.style.color = 'yellow'
-  },
-  updated: (el: any, binding: any, vnode: any) => {
-    console.log('updated', el, binding, vnode)
-  }
-}
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 const isMobile = ref(false)
 
