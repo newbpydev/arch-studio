@@ -1,5 +1,6 @@
 /* --------------------------------- Script --------------------------------- */
 <script lang="ts" setup>
+
 defineProps({
   isOpen: Boolean,
   isMobile: Boolean
@@ -7,18 +8,16 @@ defineProps({
 
 const model = defineModel<boolean>({ required: true })
 
-const emit = defineEmits<{
-  menuClick: [value: boolean]
-}>()
-
 const handleMenuClick = () => {
-  // emit('menuClick')
+  console.log('menu clicked')
+  model.value = !model.value
 }
+
 </script>
 
 /* -------------------------------- Template -------------------------------- */
 <template>
-  <nav v-show="isOpen" :class="['navigation', isMobile && 'detach']">
+  <nav :class="['navigation', isMobile && isOpen && 'modal']" @click="handleMenuClick">
     <ul class="nav-list">
       <li class="list-item">
         <RouterLink class="link" to="/portfolio">Portfolio</RouterLink>
@@ -36,6 +35,11 @@ const handleMenuClick = () => {
 /* --------------------------------- Styles --------------------------------- */
 <style scoped>
 .navigation {
+  display: none;
+
+  @media (min-width: 48em) {
+    display: block;
+  }
 
   & .nav-list {
     display: flex;
@@ -48,23 +52,25 @@ const handleMenuClick = () => {
     }
   }
 
-  &.detach {
-    position: absolute;
+  &.modal {
+    display: block;
+    position: fixed;
     background-color: rgba(0, 0, 0, .5);
     height: 100vh;
     width: 100%;
-    top: 100%;
+    top: 0;
     left: 0;
 
     & .nav-list {
       position: absolute;
       right: 0;
-      top: 0;
+      top: 9.6rem;
       background-color: var(--color-background-menu);
       padding: 3.9rem 4.8rem 4.2rem;
       flex-direction: column;
       gap: 1.7rem;
       width: 34.3rem;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 
       & .list-item {
 
