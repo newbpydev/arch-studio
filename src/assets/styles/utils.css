@@ -1,25 +1,21 @@
 .container {
-    width: 100%;
-    @media (min-width: 48em) {
-        max-width: 57.3rem;
-    }
-    @media (min-width: 90em) {
-        max-width: 111rem;
-    }
+  width: 100%;
+  @media (min-width: 48em) {
+    max-width: 57.3rem;
+  }
+  @media (min-width: 90em) {
+    max-width: 111rem;
+  }
 }
 
 .mx-auto {
-    margin: 0 auto;
-
-    /*@media (min-width: 48em) {*/
-    /*    */
-    /*}*/
+  margin: 0 auto;
 }
 
 .px-auto {
-    padding: 0 3.2rem;
+  padding: 0 3.2rem;
 
-    @media (min-width: 48em) {
-        padding: 0;
-    }
+  @media (min-width: 48em) {
+    padding: 0;
+  }
 }
