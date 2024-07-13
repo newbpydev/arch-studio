@@ -4,21 +4,11 @@ import TheHeaderLogo from '@/components/common/icons/TheHeaderLogo.vue'
 import MainNavigation from '@/components/common/navigation/MainNavigation.vue'
 import MenuIcon from '@/assets/images/icons/icon-hamburger.svg'
 import CloseIcon from '@/assets/images/icons/icon-close.svg'
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { ref } from 'vue'
+import { useMobileMode } from '@/composables/useMobileMode'
 
-const isMobile = ref(false)
+const { isMobile } = useMobileMode()
 const isOpen = ref(false)
-
-const handleResize = () => {
-  isMobile.value = window.innerWidth <= 767
-}
-
-onMounted(() => {
-  window.addEventListener('resize', handleResize)
-})
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', handleResize)
-})
 
 const handleClick = (e: MouseEvent) => {
   if (isMobile.value) {
