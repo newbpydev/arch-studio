@@ -10,7 +10,7 @@ import { useMobileMode } from '@/composables/useMobileMode'
 const { isMobile } = useMobileMode()
 const isOpen = ref(false)
 
-const handleClick = (e: MouseEvent) => {
+const handleClick = () => {
   if (isMobile.value) {
     isOpen.value = !isOpen.value
   }
@@ -32,9 +32,7 @@ const handleCloseModal = () => {
       <CloseIcon v-if="isOpen" class="menu-icon" @click="handleClick" />
     </div>
 
-    <Teleport v-show="isOpen" :disabled="!isMobile" to="body">
-      <MainNavigation v-model="isOpen" :is-mobile="isMobile" :is-open="isOpen" />
-    </Teleport>
+    <MainNavigation v-model="isOpen" :is-mobile="isMobile" :is-open="isOpen" />
   </header>
 </template>
 
@@ -59,7 +57,6 @@ header {
     gap: 9.484rem;
   }
 
-
   & .icons {
     display: flex;
 
@@ -76,6 +73,5 @@ header {
       }
     }
   }
-
 }
 </style>

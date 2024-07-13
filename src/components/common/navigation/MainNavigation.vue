@@ -16,19 +16,21 @@ const handleMenuClick = () => {
 
 /* -------------------------------- Template -------------------------------- */
 <template>
-  <nav :class="['navigation', isMobile && isOpen && 'modal']" @click="handleMenuClick">
-    <ul class="nav-list">
-      <li class="list-item">
-        <RouterLink class="link" to="/portfolio">Portfolio</RouterLink>
-      </li>
-      <li class="list-item">
-        <RouterLink class="link" to="/about">About Us</RouterLink>
-      </li>
-      <li class="list-item">
-        <RouterLink class="link" to="/contact">Contact</RouterLink>
-      </li>
-    </ul>
-  </nav>
+  <Teleport v-show="isOpen" :disabled="!isMobile" to="body">
+    <nav :class="['navigation', isMobile && isOpen && 'modal']" @click="handleMenuClick">
+      <ul class="nav-list">
+        <li class="list-item">
+          <RouterLink class="link" to="/portfolio">Portfolio</RouterLink>
+        </li>
+        <li class="list-item">
+          <RouterLink class="link" to="/about">About Us</RouterLink>
+        </li>
+        <li class="list-item">
+          <RouterLink class="link" to="/contact">Contact</RouterLink>
+        </li>
+      </ul>
+    </nav>
+  </Teleport>
 </template>
 
 /* --------------------------------- Styles --------------------------------- */
