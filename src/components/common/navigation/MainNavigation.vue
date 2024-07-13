@@ -9,7 +9,6 @@ defineProps({
 const model = defineModel<boolean>({ required: true })
 
 const handleMenuClick = () => {
-  console.log('menu clicked')
   model.value = !model.value
 }
 
@@ -42,11 +41,26 @@ const handleMenuClick = () => {
   }
 
   & .nav-list {
+    color: var(--ast-c-medium-grey);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 31.3rem;
 
     & .list-item {
 
       & .link {
+        font-weight: bold;
+        line-height: 2.5rem;
+        transition: color .2s;
+
+        &:hover {
+          color: var(--ast-c-very-dark-blue);
+        }
+
+        @media (min-width: 48em) {
+
+        }
 
       }
     }
@@ -80,7 +94,12 @@ const handleMenuClick = () => {
           color: var(--color-heading);
           font-weight: bold;
           font-size: 3.2rem;
+          line-height: 4rem;
+          transition: color .2s;
 
+          &:hover {
+            color: var(--ast-c-medium-grey);
+          }
         }
       }
     }

@@ -5,25 +5,43 @@ import LogoIcon from '@/assets/images/logo.svg'
 
 /* -------------------------------- Template -------------------------------- */
 <template>
-  <div class="logo-wrapper">
-    <RouterLink to="/">
-      <!-- <img src="/images/logo.svg" class="logo" alt="" /> -->
-      <LogoIcon class="logo" />
-    </RouterLink>
-  </div>
+
+  <RouterLink to="/">
+    <!-- <img src="/images/logo.svg" class="logo" alt="" /> -->
+    <LogoIcon class="logo" />
+  </RouterLink>
+
   <!-- <img src="@/assets/images/logo.svg" alt="" /> -->
 </template>
 
 /* --------------------------------- Styles --------------------------------- */
-<style scoped>
-.logo-wrapper {
-  & .logo {
-    display: block;
-    height: 3.2rem;
-    width: auto;
+<!--.logo-wrapper {-->
+<!--  & .logo {-->
+<!--    display: block;-->
+<!--    height: 3.2rem;-->
+<!--    width: auto;-->
 
-    & * {
-      scale: 0.8;
+<!--    & * {-->
+<!--      scale: 0.8;-->
+<!--    }-->
+<!--  }-->
+<!--}-->
+<style scoped>
+
+.logo {
+  display: block;
+  height: 3.2rem;
+  width: auto;
+
+  @media (min-width: 48em) {
+    height: 4rem;
+  }
+
+  & * {
+    scale: 0.8;
+
+    @media (min-width: 48em) {
+      scale: 1;
     }
   }
 }
