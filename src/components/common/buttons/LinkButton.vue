@@ -28,7 +28,7 @@ defineProps<{
   background-color: var(--color-background-button-normal);
   color: var(--ast-c-white);
   padding: 2.5rem 0 2.2rem;
-  transition: all .3s;
+  transition: background-color .3s;
 
   &:hover {
     background-color: var(--color-background-button-hover);
@@ -37,7 +37,7 @@ defineProps<{
   &:active {
     background-color: var(--color-background-button-active);
   }
-  
+
   & .text {
   }
 
