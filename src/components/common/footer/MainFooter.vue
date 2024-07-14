@@ -9,7 +9,10 @@ import LinkButton from '@/components/common/buttons/LinkButton.vue'
 <template>
   <footer class="footer container mx-auto">
     <div class="logo-wrapper">
-      <LogoIcon class="logo" />
+      <RouterLink to="/">
+
+        <LogoIcon class="logo" />
+      </RouterLink>
     </div>
 
     <FooterNavigation />
@@ -53,8 +56,21 @@ import LinkButton from '@/components/common/buttons/LinkButton.vue'
       top: 0;
     }
 
+    @media (min-width: 75em) {
+      height: 20rem;
+      width: 20rem;
+    }
+
+    & a {
+      
+    }
+
     & .logo {
       scale: .6;
+
+      @media (min-width: 75em) {
+        scale: 1;
+      }
 
       & * {
         fill: white;
@@ -69,6 +85,10 @@ import LinkButton from '@/components/common/buttons/LinkButton.vue'
     @media (min-width: 48em) {
       right: 0;
       top: 2.4rem;
+    }
+
+    @media (min-width: 75em) {
+      top: 6.4rem;
     }
   }
 

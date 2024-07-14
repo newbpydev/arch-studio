@@ -27,6 +27,10 @@
     padding: 4.9rem 25% 4.6rem 5.2%;
   }
 
+  @media (min-width: 75em) {
+    padding: 8.75rem 38.6rem 8.75rem 8.5rem;
+  }
+
   & .nav-list {
     display: flex;
     flex-direction: column;
@@ -40,6 +44,11 @@
     & a {
       line-height: 2.5rem;
       font-weight: bold;
+      transition: color .2s;
+
+      &:hover {
+        color: var(--color-heading);
+      }
     }
   }
 }
