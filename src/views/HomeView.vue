@@ -31,10 +31,13 @@ import TheSlide from '@/components/specific/TheSlide.vue'
       <picture>
         <source media="(min-width: 75em)" srcset="/images/home/desktop/image-small-team.jpg">
         <source media="(min-width: 48em)" srcset="/images/home/tablet/image-small-team.jpg">
-        <img alt="image to illustrate small teams big ideas" src="/images/home/tablet/image-small-team.jpg">
+        <img alt="image to illustrate small teams big ideas" class="about-us__img"
+             src="/images/home/mobile/image-small-team.jpg">
       </picture>
-      <h2> Small team, big ideas</h2>
-      <link-button to="/about">About us</link-button>
+      <div class="about-us__overlay">
+        <h2 class="about-us__title"> Small team, <br> big ideas</h2>
+        <link-button class="about-us__link" to="/about">About us</link-button>
+      </div>
     </section>
 
     <section class="featured-section px-auto">
@@ -114,6 +117,42 @@ import TheSlide from '@/components/specific/TheSlide.vue'
 
       @media (min-width: 48em) {
         margin-bottom: 2.2rem;
+      }
+    }
+  }
+
+  & .about-us-section {
+    position: relative;
+    margin-bottom: 7.3rem;
+
+    & .about-us__img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+
+    }
+
+    & .about-us__overlay {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      place-content: center;
+      gap: 2.3rem;
+      padding: 0 3.2rem;
+      background-color: rgba(0, 0, 0, 50%);
+
+      & .about-us__title {
+        color: var(--ast-c-white);
+        font-size: var(--font-size-heading-m);
+        line-height: var(--line-height-heading-m);
+        letter-spacing: var(--letter-spacing-heading-m);
+      }
+
+      & .about-us__link {
+        width: 18.7rem;
       }
     }
   }
