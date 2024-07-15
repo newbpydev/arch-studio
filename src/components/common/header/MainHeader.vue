@@ -37,6 +37,8 @@ const handleCloseModal = () => {
 </template>
 
 /* --------------------------------- Styles --------------------------------- */
+
+
 <style scoped>
 header {
   background-color: white;

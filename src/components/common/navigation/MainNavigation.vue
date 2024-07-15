@@ -34,6 +34,12 @@ const handleMenuClick = () => {
 </template>
 
 /* --------------------------------- Styles --------------------------------- */
+<style>
+body:has(nav.navigation.modal) {
+  overflow: hidden;
+}
+</style>
+
 <style scoped>
 .navigation {
   display: none;
@@ -77,7 +83,6 @@ const handleMenuClick = () => {
     top: 0;
     left: 0;
 
-
     & .nav-list {
       position: absolute;
       right: 0;
@@ -107,7 +112,7 @@ const handleMenuClick = () => {
       }
     }
   }
-
-
 }
+
+
 </style>

@@ -2,13 +2,15 @@
 import ArrowIcon from '@/assets/images/icons/icon-arrow.svg'
 
 defineProps<{
-  to: string
+  to: string,
+  isFull?: boolean
+
 }>()
 
 </script>
 
 <template>
-  <RouterLink :to="to" class="btn">
+  <RouterLink :class="['btn', isFull ? 'full' : '']" :to="to">
     <span class="text">
       <slot />
     </span>
@@ -29,6 +31,10 @@ defineProps<{
   color: var(--ast-c-white);
   padding: 2.5rem 0 2.2rem;
   transition: background-color .3s;
+
+  &.full {
+    width: 100%;
+  }
 
   &:hover {
     background-color: var(--color-background-button-hover);
