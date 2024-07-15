@@ -6,8 +6,24 @@ import MainFooter from '@/components/common/footer/MainFooter.vue'
 
 <template>
   <MainHeader />
-  <RouterView />
+
+  <RouterView v-slot="{Component}">
+    <Transition name="fade">
+      <Component :is="Component" />
+    </Transition>
+  </RouterView>
+  
   <MainFooter />
 </template>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
