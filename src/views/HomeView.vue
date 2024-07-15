@@ -44,9 +44,15 @@ import TheSlide from '@/components/specific/TheSlide.vue'
       </header>
 
       <div class="featured__cards">
-        <PorfolioCard img="del-sol" rank="1" subtitle="View all Projects" title="Project Del Sol" />
-        <PorfolioCard img="228b" rank="2" subtitle="View all Projects" title="228B Tower" />
-        <PorfolioCard img="prototype" rank="3" subtitle="View all Projects" title="Le Prototype" />
+        <RouterLink to="/portfolio">
+          <PorfolioCard img="del-sol" rank="1" subtitle="View all Projects" title="Project Del Sol" />
+        </RouterLink>
+        <RouterLink to="/portfolio">
+          <PorfolioCard img="228b" rank="2" subtitle="View all Projects" title="228B Tower" />
+        </RouterLink>
+        <RouterLink to="/portfolio">
+          <PorfolioCard img="prototype" rank="3" subtitle="View all Projects" title="Le Prototype" />
+        </RouterLink>
       </div>
 
     </section>
