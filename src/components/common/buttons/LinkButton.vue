@@ -45,6 +45,7 @@ defineProps<{
   }
 
   & .text {
+    font-weight: bold;
   }
 
   & .icon {

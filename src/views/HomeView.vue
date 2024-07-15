@@ -112,14 +112,40 @@ import TheSlide from '@/components/specific/TheSlide.vue'
     }
   }
 
-  & .featured__header {
-
-    & .featured__link {
-      width: 100%
+  & .featured-section {
+    position: relative;
 
 
+    & .featured__header {
+      margin-bottom: 4.3rem;
+
+      & h2 {
+        font-size: var(--font-size-heading-m);
+        color: var(--color-heading);
+        font-weight: bold;
+        line-height: var(--line-height-heading-m);
+        letter-spacing: var(--letter-spacing-heading-m);
+      }
+
+      & .featured__link {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: calc(100% - 6.4rem);
+        margin: 0 auto;
+      }
     }
+
+    & .featured__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+      padding-bottom: 9.6rem;
+    }
+
   }
+
 
 }
 </style>
