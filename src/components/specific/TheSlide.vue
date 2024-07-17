@@ -35,17 +35,13 @@ defineProps<{
   color: var(--ast-c-white);
   min-width: 37.5rem;
 
-
   & picture {
-
 
     & img {
       display: block;
       object-fit: cover;
       width: 100%;
-
     }
-
   }
 
   & .overlay {
@@ -69,13 +65,11 @@ defineProps<{
     }
 
     & .description {
-
     }
 
     & .link {
     }
   }
-
 }
 
 </style>
