@@ -11,9 +11,9 @@ defineProps<{
 <template>
   <div class="slider-wrapper">
     <div class="slider">
-      <TransitionGroup name="slider">
-        <TheSlide v-for="(slide, i) in data" v-show="i === activeImg" :key="i" :index="i" :slide="slide" />
-      </TransitionGroup>
+      <!--      <TransitionGroup name="slider">-->
+      <TheSlide v-for="(slide, i) in data" v-show="i === activeImg" :key="i" :index="i" :slide="slide" />
+      <!--      </TransitionGroup>-->
     </div>
   </div>
 </template>
@@ -21,14 +21,21 @@ defineProps<{
 <style scoped>
 .slider-enter-active,
 .slider-leave-active {
-  transition: all 0.2s ease;
+  transition: all 2s ease;
 }
 
 .slider-enter-from,
 .slider-leave-to {
-  opacity: .9;
-
+  opacity: 0;
+  transform: translateX(50%);
 }
+
+.slider-enter-to,
+.slider-leave-from {
+  opacity: 1;
+  transform: translateX(-100%);
+}
+
 
 .slider-wrapper {
   position: relative;

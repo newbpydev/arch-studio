@@ -34,12 +34,14 @@ defineProps<{
   position: relative;
   color: var(--ast-c-white);
   min-width: 37.5rem;
+  width: 100%;
+  overflow: hidden;
 
   & picture {
 
     & img {
       display: block;
-      object-fit: cover;
+
       width: 100%;
     }
   }
