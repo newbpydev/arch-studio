@@ -2,14 +2,68 @@
 <script lang="ts" setup>
 import LinkButton from '@/components/common/buttons/LinkButton.vue'
 import PorfolioCard from '@/components/specific/PortfolioCard.vue'
-import TheSlide from '@/components/specific/TheSlide.vue'
+import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
+import SliderNav from '@/components/specific/SliderNav.vue'
+import TheSlider from '@/components/specific/TheSlider.vue'
+
+export interface Slide {
+  title: string,
+  description: string,
+  imgSrc: string
+}
+
+const data = reactive<Slide[]>([
+  {
+    title: 'Project Paramour',
+    description: 'Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.',
+    imgSrc: 'paramour'
+  },
+  {
+    title: 'Seraph Station',
+    description: 'The Seraph Station project challenged us to design a unique station that would transport people through time. The result is a fresh and futuristic model inspired by space stations.',
+    imgSrc: 'seraph'
+  },
+  {
+    title: 'Federal II Tower',
+    description: 'A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.',
+    imgSrc: 'federal'
+  },
+  {
+    title: 'Trinity Bank Tower',
+    description: 'Trinity Bank challenged us to make a concept for a 84 story building located in the middle of a city with a high earthquake frequency. For this project we used curves to blend design and stability to meet our objectives.',
+    imgSrc: 'trinity'
+  }
+])
+
+const totalImgs = computed(() => data.length)
+
+const activeImg = ref<number>(0)
+const intervalId = ref<number>()
+
+onMounted(() => {
+  intervalId.value = setInterval(() => {
+    const nextActive = activeImg.value + 1
+    activeImg.value = nextActive >= totalImgs.value ? 0 : nextActive
+  }, 5000)
+})
+
+onUnmounted(() => {
+  clearInterval(intervalId.value)
+})
+
+const handleSlideSelection = (i: number) => {
+  activeImg.value = i
+  clearInterval(intervalId.value)
+}
 </script>
 
 /* -------------------------------- Template -------------------------------- */
 <template>
   <main class="home-page container mx-auto">
-    <section class="slide-section">
-      <TheSlide />
+    <section class="hero-section">
+      <TheSlider :active-img="activeImg" :data="data" />
+
+      <SliderNav :active-img="activeImg" :total-imgs="totalImgs" @slide-selection="handleSlideSelection" />
     </section>
 
     <section class="intro-section px-auto">
@@ -64,10 +118,13 @@ import TheSlide from '@/components/specific/TheSlide.vue'
 
 /* --------------------------------- Styles --------------------------------- */
 <style scoped>
+
+
 .home-page {
   margin-bottom: 13.2rem;
 
-  & .slide-section {
+  & .hero-section {
+    position: relative;
     margin-bottom: 7.2rem;
   }
 

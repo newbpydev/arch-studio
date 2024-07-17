@@ -43,6 +43,7 @@ defineProps<{
     width: 100%;
     height: auto;
     object-fit: cover;
+    scroll-snap-align: start;
     transition: scale .3s;
 
   }
