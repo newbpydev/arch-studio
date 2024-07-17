@@ -46,6 +46,10 @@ defineProps<{
     height: 56rem;
     display: flex;
     overflow-x: hidden;
+
+    @media (min-width: 48em) {
+      height: 72rem;
+    }
   }
 }
 

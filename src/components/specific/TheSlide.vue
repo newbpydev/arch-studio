@@ -41,8 +41,9 @@ defineProps<{
 
     & img {
       display: block;
-
+      object-fit: cover;
       width: 100%;
+
     }
   }
 
@@ -58,12 +59,24 @@ defineProps<{
     padding: 11.6rem 3.2rem 11rem;
     background-color: rgba(0, 0, 0, 50%);
 
+    @media (min-width: 48em) {
+      padding: 18.6rem 5.8rem 17.9rem;
+    }
+
+    @media (min-width: 75em) {
+      padding: 18.6rem 37.6rem 17.9rem 19rem;
+    }
+
     & .title {
       font-size: var(--font-size-heading-l);
       color: inherit;
       letter-spacing: var(--letter-spacing-heading-l);
       line-height: var(--line-height-heading-l);
       margin-bottom: 1.1rem;
+
+      @media (min-width: 48em) {
+        margin-bottom: 1rem;
+      }
     }
 
     & .description {
