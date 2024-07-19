@@ -71,12 +71,12 @@ const handleSlideSelection = (i: number) => {
       <img alt="Welcome image" class="img" src="/images/home/desktop/image-welcome.jpg">
 
       <h1>Welcome to Arch Studio</h1>
-      <p>We have a unique network and skillset to help bring your projects to life. Our
+      <p class="description">We have a unique network and skillset to help bring your projects to life. Our
         small team of highly skilled individuals combined with our large network put us
         in a strong position to deliver exceptional results.</p>
-      <p>Over the past 10 years, we have worked on all kinds of projects. From stations
+      <p class="description">Over the past 10 years, we have worked on all kinds of projects. From stations
         to high-rise buildings, we create spaces that inspire and delight.</p>
-      <p>We work closely with our clients so that we understand the intricacies of each
+      <p class="description">We work closely with our clients so that we understand the intricacies of each
         project. This allows us to work in harmony the surrounding area to create truly
         stunning projects that will stand the test of time.</p>
     </section>
@@ -140,11 +140,22 @@ const handleSlideSelection = (i: number) => {
     position: relative;
     margin-bottom: 11.3rem;
 
+    @media (min-width: 48em) {
+      margin-bottom: 23.3rem;
+    }
+
     & .title {
       display: none;
 
       @media (min-width: 48em) {
+        width: auto;
+        color: var(--ast-c-very-light-grey);
         display: block;
+        font-size: var(--font-size-heading-xl);
+        font-weight: bold;
+        line-height: var(--line-height-heading-xl);
+        letter-spacing: var(--letter-spacing-heading-xl);
+        margin-bottom: -4rem;
       }
     }
 
@@ -164,6 +175,12 @@ const handleSlideSelection = (i: number) => {
       font-weight: bold;
       padding-top: 6.8rem;
       margin-bottom: 2.2rem;
+      max-width: 10ch;
+
+      @media (min-width: 48em) {
+        padding-top: 0;
+        margin-bottom: 4.3rem;
+      }
 
       @media (max-width: 767px) {
         &::before {
@@ -175,13 +192,14 @@ const handleSlideSelection = (i: number) => {
           background-color: #c8ccd8;
         }
       }
+
     }
 
     & p:not(p:last-child) {
-      margin-bottom: 2.4rem;
+      margin-bottom: 3.6rem;
 
       @media (min-width: 48em) {
-        margin-bottom: 2.2rem;
+
       }
     }
   }
