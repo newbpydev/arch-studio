@@ -126,6 +126,14 @@ const handleSlideSelection = (i: number) => {
   & .hero-section {
     position: relative;
     margin-bottom: 7.2rem;
+
+    @media (min-width: 45em) {
+      margin-bottom: 8.9rem;
+    }
+
+    @media (min-width: 75em) {
+      margin-bottom: 10.8rem;
+    }
   }
 
   & .intro-section {
