@@ -60,8 +60,16 @@ defineProps<{
 
     & .wrapper {
       position: absolute;
-      bottom: 2.3rem;
       left: 2.4rem;
+      bottom: 2.3rem;
+
+      @media (min-width: 48em) {
+        left: 4rem;
+        bottom: 3.9rem
+      }
+
+      @media (min-width: 75em) {
+      }
 
       & .title {
         color: var(--ast-c-white);
@@ -77,9 +85,22 @@ defineProps<{
 
     & .rank {
       display: none;
+      font-size: 25rem;
+      line-height: 20rem;
+      letter-spacing: -.5rem;
+      opacity: .5;
+      font-weight: bold;
 
       @media (min-width: 48em) {
+        position: absolute;
+        top: 2.9rem;
+        right: 1.6rem;
         display: block;
+      }
+
+      @media (min-width: 75em) {
+        right: -1.6rem;
+        top: 4.5rem;
       }
     }
   }

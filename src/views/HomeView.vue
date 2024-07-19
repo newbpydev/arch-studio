@@ -126,6 +126,10 @@ const handleSlideSelection = (i: number) => {
 .home-page {
   margin-bottom: 13.2rem;
 
+  @media (min-width: 48em) {
+    margin-bottom: 20rem;
+  }
+
   & .hero-section {
     position: relative;
     margin-bottom: 7.2rem;
@@ -227,6 +231,12 @@ const handleSlideSelection = (i: number) => {
     position: relative;
     margin-bottom: 7.3rem;
 
+    @media (min-width: 48em) {
+      margin-bottom: 20rem;
+    }
+    @media (min-width: 75em) {
+    }
+
     & .about-us__img {
       display: block;
       width: 100%;
@@ -245,6 +255,13 @@ const handleSlideSelection = (i: number) => {
       gap: 2.3rem;
       padding: 0 3.2rem;
       background-color: rgba(0, 0, 0, 50%);
+
+      @media (min-width: 48em) {
+        padding: 16.7rem 7rem 16.7rem 5.8rem;
+      }
+      @media (min-width: 75em) {
+        padding: 16.7rem 47.5rem 16.8rem 19rem;
+      }
 
       & .about-us__title {
         color: var(--ast-c-white);
@@ -266,6 +283,16 @@ const handleSlideSelection = (i: number) => {
     & .featured__header {
       margin-bottom: 4.3rem;
 
+      @media (min-width: 48em) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8.5rem;
+      }
+      @media (min-width: 75em) {
+        margin-bottom: 6.4rem;
+      }
+
       & h2 {
         font-size: var(--font-size-heading-m);
         color: var(--color-heading);
@@ -281,6 +308,15 @@ const handleSlideSelection = (i: number) => {
         left: 0;
         width: calc(100% - 6.4rem);
         margin: 0 auto;
+
+        @media (min-width: 48em) {
+          position: relative;
+          width: 16.9rem;
+          margin: 0;
+
+        }
+        @media (min-width: 75em) {
+        }
       }
     }
 
@@ -289,6 +325,14 @@ const handleSlideSelection = (i: number) => {
       flex-direction: column;
       gap: 2.4rem;
       padding-bottom: 9.6rem;
+
+      @media (min-width: 48em) {
+        padding-bottom: 0;
+      }
+      @media (min-width: 75em) {
+        flex-direction: row;
+        gap: 3rem;
+      }
     }
 
   }
