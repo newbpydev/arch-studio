@@ -70,15 +70,18 @@ const handleSlideSelection = (i: number) => {
       <span class="title">Welcome</span>
       <img alt="Welcome image" class="img" src="/images/home/desktop/image-welcome.jpg">
 
-      <h1>Welcome to Arch Studio</h1>
-      <p class="description">We have a unique network and skillset to help bring your projects to life. Our
-        small team of highly skilled individuals combined with our large network put us
-        in a strong position to deliver exceptional results.</p>
-      <p class="description">Over the past 10 years, we have worked on all kinds of projects. From stations
-        to high-rise buildings, we create spaces that inspire and delight.</p>
-      <p class="description">We work closely with our clients so that we understand the intricacies of each
-        project. This allows us to work in harmony the surrounding area to create truly
-        stunning projects that will stand the test of time.</p>
+      <div class="intro-text">
+
+        <h1>Welcome to Arch Studio</h1>
+        <p class="description">We have a unique network and skillset to help bring your projects to life. Our
+          small team of highly skilled individuals combined with our large network put us
+          in a strong position to deliver exceptional results.</p>
+        <p class="description">Over the past 10 years, we have worked on all kinds of projects. From stations
+          to high-rise buildings, we create spaces that inspire and delight.</p>
+        <p class="description">We work closely with our clients so that we understand the intricacies of each
+          project. This allows us to work in harmony the surrounding area to create truly
+          stunning projects that will stand the test of time.</p>
+      </div>
     </section>
 
     <section class="about-us-section">
@@ -144,6 +147,10 @@ const handleSlideSelection = (i: number) => {
       margin-bottom: 23.3rem;
     }
 
+    @media (min-width: 75em) {
+      margin-bottom: 21.1rem;
+    }
+
     & .title {
       display: none;
 
@@ -166,7 +173,15 @@ const handleSlideSelection = (i: number) => {
         display: block;
         position: absolute;
         right: 0;
-        top: 5rem;
+        top: 8.5rem;
+        z-index: -2;
+      }
+    }
+
+    & .intro-text {
+      @media (min-width: 75em) {
+        margin-left: 18.9rem;
+        width: 44.6rem;
       }
     }
 
