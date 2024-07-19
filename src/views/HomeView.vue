@@ -164,6 +164,9 @@ const handleSlideSelection = (i: number) => {
 
       @media (min-width: 75em) {
         display: block;
+        position: absolute;
+        right: 0;
+        top: 5rem;
       }
     }
 
@@ -176,6 +179,7 @@ const handleSlideSelection = (i: number) => {
       padding-top: 6.8rem;
       margin-bottom: 2.2rem;
       max-width: 10ch;
+      white-space: pre-wrap;
 
       @media (min-width: 48em) {
         padding-top: 0;
